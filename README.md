@@ -6,11 +6,26 @@ This is a very basic setup of a Sinatra app, that already has a model example.
 
 To get started run the following commands:
 
+Install dependencies:
 ```
 bundle install
+```
+
+Create database:
+```
 bundle exec rake db:create
+```
+
+Run migrations to update database schema:
+```
 bundle exec rake db:migrate
 ```
+
+Whenever you need to update your database (add tables, add columns, etc), you should create a new migration file with the following command:
+```
+bundle exec rake db:create_migration NAME=migration_name
+```
+`migration_name` should be replaced with the name you want to give to the migration file.
 
 *Note:* This app assumes you have
 [sqlite3](https://www.sqlite.org/download.html).
@@ -31,13 +46,4 @@ Once in the console, write:
 ```
 Post.create title: "Some title"
 exit
-```
-
-## Generating Migrations
-
-There are some useful tasks on the Rakefile, including one to generate
-migrations. It runs as follows:
-
-```
-bundle exec rake db:create_migrations NAME=migration_name
 ```
