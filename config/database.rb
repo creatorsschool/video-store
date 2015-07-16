@@ -16,4 +16,8 @@ configure do
     autoload ActiveSupport::Inflector.camelize(filename), model_file
   end
 
+  if Video.count == 0
+    Video.create title: 'Fight Club', year: 1999
+    Video.create title: 'City of God', year: 2002
+  end
 end

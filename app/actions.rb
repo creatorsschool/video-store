@@ -1,8 +1,30 @@
-get "/" do
+get '/' do
+  @videos = Video.all
   erb :index
 end
 
-get "/posts" do
-  @posts = Post.all
-  erb :"posts/index"
+# Routes for show
+
+get '/:id' do
+end
+
+# Routes for edit
+
+get '/:id/edit' do
+end
+
+post '/:id' do
+end
+
+# Routes for new
+
+get '/new' do
+end
+
+post '/create' do
+end
+
+# Routes for remove
+
+post '/:id/delete' do
 end

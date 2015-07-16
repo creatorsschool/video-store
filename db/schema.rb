@@ -13,8 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150707100954) do
 
-  create_table "posts", force: :cascade do |t|
+  create_table "videos", force: :cascade do |t|
     t.string   "title",      null: false
+    t.integer  "year",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
