@@ -1,3 +1,4 @@
+# coding: utf-8
 get '/' do
   @videos = Video.all
   erb :index
@@ -27,4 +28,5 @@ end
 # Routes for remove
 
 post '/:id/delete' do
+  redirect '/', notice: 'Removed'
 end

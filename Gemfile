@@ -5,6 +5,8 @@ gem 'rake'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-activerecord'
+gem 'rack-flash3'
+gem 'sinatra-redirect-with-flash'
 
 gem 'puma'
 gem 'tux'

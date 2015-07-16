@@ -6,7 +6,9 @@ require 'active_support/all'
 # Load Sinatra Framework (with AR)
 require 'sinatra'
 require 'sinatra/activerecord'
-require 'sinatra/contrib/all' # Requires cookies, among other things
+require 'sinatra/contrib/all'
+require 'rack-flash'
+require 'sinatra/redirect_with_flash'
 
 require 'pry'
 
@@ -19,6 +21,7 @@ configure do
   set :server, :puma
 
   enable :sessions
+  use Rack::Flash, sweep: true
   set :session_secret, ENV['SESSION_KEY'] || 'creatorsschoolsecret'
 
   set :views, File.join(Sinatra::Application.root, "app", "views")
