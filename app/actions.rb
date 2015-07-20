@@ -12,13 +12,6 @@ end
 # Routes for edit
 
 get '/:id/edit' do
-	@videos = Video.find(params[:id])
-	erb :edit
-end
-
-post '/:id/edit' do
-	@videos = Video.where(id: params[:id]).update_all(title: params[:title], year: params[:year], director: params[:director])
-	redirect "/"
 end
 
 post '/:id' do
