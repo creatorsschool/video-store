@@ -30,7 +30,7 @@ end
 
 post '/:id/edit' do
 	@videos = Video.where(id: params[:id]).update_all(title: params[:title], year: params[:year], director: params[:director])
-	redirect "/"
+	redirect "/", notice: 'Video Edited'
 end
 
 post '/:id' do
@@ -47,6 +47,7 @@ end
 # Routes for remove
 
 post '/:id/delete' do
+
   redirect '/', notice: 'Removed'
 end
 
