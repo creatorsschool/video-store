@@ -7,6 +7,8 @@ end
 # Routes for show
 
 get '/:id' do
+    @post = Video.find(params[:id])
+    erb :show
 end
 
 # Routes for edit
