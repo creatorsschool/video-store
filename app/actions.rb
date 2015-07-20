@@ -1,6 +1,16 @@
 # coding: utf-8
 get '/' do
-  @videos = Video.all
+	@videos = Video.all
+	if params.key?('sort')
+		@videos = @videos.sort_by do |video|
+		video.year
+	end
+
+	if params[:sort] == "desc"
+		@videos = @videos.reverse
+	end
+    end
+  
   erb :index
 end
 
@@ -32,3 +42,7 @@ end
 post '/:id/delete' do
   redirect '/', notice: 'Removed'
 end
+
+
+
+
