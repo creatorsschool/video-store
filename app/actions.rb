@@ -47,6 +47,7 @@ end
 # Routes for remove
 
 post '/:id/delete' do
+  Video.destroy(params[:id])
   redirect '/', notice: 'Removed'
 end
 
