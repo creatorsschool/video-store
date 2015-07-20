@@ -8,8 +8,6 @@ Getting Started
 
 To get started run the following commands:
 
-Install dependencies:
-
 ```
 bundle install
 ```
@@ -23,7 +21,7 @@ bundle exec rake db:migrate
 Running the app
 ---------------
 
-To run the app we are using [shotgun](https://github.com/rtomayko/shotgun),
+To run the app use [shotgun](https://github.com/rtomayko/shotgun),
 which means you can run just by typing `shotgun`.
 
 Add some dummy data to your application. Run `tux` and paste the following code:
