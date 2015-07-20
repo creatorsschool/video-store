@@ -8,8 +8,6 @@ Getting Started
 
 To get started run the following commands:
 
-Install dependencies:
-
 ```
 bundle install
 ```
